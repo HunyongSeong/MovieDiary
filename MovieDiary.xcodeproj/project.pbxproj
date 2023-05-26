@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E65BD4B92A212884006C4CAD /* NavigationStack in Frameworks */ = {isa = PBXBuildFile; productRef = E65BD4B82A212884006C4CAD /* NavigationStack */; };
+		E65BD4BB2A214495006C4CAD /* MovieCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BD4BA2A214495006C4CAD /* MovieCollectionView.swift */; };
 		E6ADAF462A211AA300314253 /* MovieDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAF452A211AA300314253 /* MovieDiaryApp.swift */; };
 		E6ADAF482A211AA300314253 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ADAF472A211AA300314253 /* MainView.swift */; };
 		E6ADAF4A2A211AA500314253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ADAF492A211AA500314253 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E65BD4BA2A214495006C4CAD /* MovieCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionView.swift; sourceTree = "<group>"; };
 		E6ADAF422A211AA300314253 /* MovieDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ADAF452A211AA300314253 /* MovieDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiaryApp.swift; sourceTree = "<group>"; };
 		E6ADAF472A211AA300314253 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				E6ADAF472A211AA300314253 /* MainView.swift */,
 				E6ADAF532A2122BC00314253 /* MovieAddView.swift */,
+				E65BD4BA2A214495006C4CAD /* MovieCollectionView.swift */,
 			);
 			path = MovieView;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				E6ADAF542A2122BC00314253 /* MovieAddView.swift in Sources */,
 				E6ADAF482A211AA300314253 /* MainView.swift in Sources */,
 				E6ADAF462A211AA300314253 /* MovieDiaryApp.swift in Sources */,
+				E65BD4BB2A214495006C4CAD /* MovieCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

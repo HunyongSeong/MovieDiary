@@ -1,5 +1,5 @@
 //
-//  MovieAddView.swift
+//  MovieCollectionView.swift
 //  MovieDiary
 //
 //  Created by David Goggins on 2023/05/27.
@@ -7,24 +7,22 @@
 
 import SwiftUI
 
-struct MovieAddView: View {
+struct MovieCollectionView: View {
     
-    @State var MovieTitleName = ""
-
+    @Binding var MovieTitleName: String
+    
     var body: some View {
         VStack {
-            Text("MovieAddView")
+            Text("MovieCollectionView")
             Image("가디언즈")
                 .resizable()
                 .foregroundColor(.accentColor)
                 .frame(width: 420*0.3, height: 694*0.3)
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Title:")
+                    Text(MovieTitleName)
                         .font(.title3)
-                        .foregroundColor(.gray)
-                    TextField("Guardians Of The Galaxy Vol 3", text: $MovieTitleName)
-                        .font(.title3)
+                        .foregroundColor(.red)
                 }
                 HStack() {
                     Text("Date:")
@@ -59,8 +57,8 @@ struct MovieAddView: View {
     }
 }
 
-//struct MovieAddView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MovieAddView(MovieTitleName: $MovieTitleName)
-//    }
-//}
+struct MovieCollectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        MovieCollectionView(MovieTitleName: .constant("sample"))
+    }
+}

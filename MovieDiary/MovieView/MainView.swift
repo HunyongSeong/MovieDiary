@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     
+//    @Binding var MovieTitleName: String
+
     var body: some View {
         NavigationView {
             NavigationLink(destination: MovieAddView()) {
@@ -26,7 +28,7 @@ struct MainView: View {
             .navigationBarItems(
                 trailing:
                     NavigationLink(
-                        destination: MovieAddView(),
+                        destination: MovieCollectionView(MovieTitleName: .constant("dd")),
                         label: {
                             Image(systemName: "plus")
                                 .bold()
@@ -37,8 +39,8 @@ struct MainView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
