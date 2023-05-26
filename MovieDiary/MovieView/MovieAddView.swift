@@ -19,8 +19,6 @@ struct MovieAddView: View {
                     Text("Title:")
                         .font(.title3)
                         .foregroundColor(.gray)
-                    Text("guardians of the galaxy vol 3")
-                        .font(.title3)
                 }
                 HStack() {
                     Text("Date:")

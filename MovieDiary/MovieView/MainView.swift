@@ -8,15 +8,31 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
-        VStack {
-            Image("가디언즈")
-                .resizable()
-                .foregroundColor(.accentColor)
-                .frame(width: 420*0.4, height: 694*0.4)
-            Text("guardians of the galaxy vol 3")
-                .font(.title3)
-                .foregroundColor(.gray)
+        NavigationView {
+            NavigationLink(destination: MovieAddView()) {
+                VStack {
+                    Image("가디언즈")
+                        .resizable()
+                        .foregroundColor(.accentColor)
+                        .frame(width: 420*0.4, height: 694*0.4)
+                    Text("guardians of the galaxy vol 3")
+                        .font(.title3)
+                        .foregroundColor(.gray)
+                }
+            }
+            .navigationTitle("Movie")
+            .navigationBarItems(
+                trailing:
+                    NavigationLink(
+                        destination: MovieAddView(),
+                        label: {
+                            Image(systemName: "plus")
+                                .bold()
+                                .foregroundColor(.red)
+                        })
+            )
         }
     }
 }
