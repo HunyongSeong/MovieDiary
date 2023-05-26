@@ -7,20 +7,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
+            Image("가디언즈")
+                .resizable()
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+                .frame(width: 420*0.4, height: 694*0.4)
+            Text("guardians of the galaxy vol 3")
+                .font(.title3)
+                .foregroundColor(.gray)
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
