@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieCollectionView: View {
     
-    @Binding var MovieTitleName: String
+//    @Binding var textArray: [String]
     
     var body: some View {
         VStack {
@@ -20,7 +20,7 @@ struct MovieCollectionView: View {
                 .frame(width: 420*0.3, height: 694*0.3)
             VStack(alignment: .leading) {
                 HStack {
-                    Text(MovieTitleName)
+                    Text("what?")
                         .font(.title3)
                         .foregroundColor(.red)
                 }
@@ -56,9 +56,9 @@ struct MovieCollectionView: View {
         }
     }
 }
-
-struct MovieCollectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieCollectionView(MovieTitleName: .constant("sample"))
-    }
-}
+//
+//struct MovieCollectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MovieCollectionView()
+//    }
+//}

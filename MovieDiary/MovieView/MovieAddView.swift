@@ -9,11 +9,14 @@ import SwiftUI
 
 struct MovieAddView: View {
     
-    @State var MovieTitleName = ""
+    @Environment(\.dismiss) private var dismiss
+    @State var showTextEditor = ""
+    @State var textArray: [String] = []
 
     var body: some View {
         VStack {
             Text("MovieAddView")
+            
             Image("가디언즈")
                 .resizable()
                 .foregroundColor(.accentColor)
@@ -23,9 +26,14 @@ struct MovieAddView: View {
                     Text("Title:")
                         .font(.title3)
                         .foregroundColor(.gray)
-                    TextField("Guardians Of The Galaxy Vol 3", text: $MovieTitleName)
+                    TextEditor(text: $showTextEditor)
                         .font(.title3)
                 }
+                Button(action: {
+                    saveButton()
+                }, label: {
+                    Text("SAVE")
+                })
                 HStack() {
                     Text("Date:")
                         .font(.title3)
@@ -57,10 +65,19 @@ struct MovieAddView: View {
             }
         }
     }
+    
+    func saveButton() {
+        textArray.append(showTextEditor)
+//        showTextEditor = ""
+        print(textArray)
+        dismiss()
+    }
 }
 
-//struct MovieAddView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MovieAddView(MovieTitleName: $MovieTitleName)
-//    }
-//}
+
+
+struct MovieAddView_Previews: PreviewProvider {
+    static var previews: some View {
+        MovieAddView()
+    }
+}

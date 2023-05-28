@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     
-//    @Binding var MovieTitleName: String
+//    @Binding var textArray: [String]
 
     var body: some View {
         NavigationView {
-            NavigationLink(destination: MovieAddView()) {
+            NavigationLink(destination: MovieCollectionView()) {
                 VStack {
                     Image("가디언즈")
                         .resizable()
@@ -28,7 +28,7 @@ struct MainView: View {
             .navigationBarItems(
                 trailing:
                     NavigationLink(
-                        destination: MovieCollectionView(MovieTitleName: .constant("dd")),
+                        destination: MovieAddView(),
                         label: {
                             Image(systemName: "plus")
                                 .bold()
