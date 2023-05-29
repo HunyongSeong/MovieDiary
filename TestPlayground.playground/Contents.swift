@@ -15,3 +15,16 @@ struct AnimalRow: View {
     }
 }
 
+struct ContentView: View {
+    var body: some View {
+        
+        let aaa = Animal(name: "tiger")
+        let bbb = Animal(name: "tiger")
+        let ccc = Animal(name: "lion")
+        let animals = [aaa, bbb, ccc]
+        
+        return List(animals) { animal in
+            AnimalRow(animal: animal)
+        }
+    }
+}

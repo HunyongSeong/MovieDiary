@@ -12,11 +12,10 @@ struct MovieAddView: View {
     @Environment(\.dismiss) private var dismiss
     @State var showTextEditor = ""
     @State var textArray: [String] = []
-
+    
     var body: some View {
         VStack {
             Text("MovieAddView")
-            
             Image("가디언즈")
                 .resizable()
                 .foregroundColor(.accentColor)
@@ -65,10 +64,9 @@ struct MovieAddView: View {
             }
         }
     }
-    
     func saveButton() {
         textArray.append(showTextEditor)
-//        showTextEditor = ""
+        //        showTextEditor = ""
         print(textArray)
         dismiss()
     }
