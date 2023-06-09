@@ -30,7 +30,7 @@ struct MovieStoryMemoView: View {
                                 .font(.headline)
                             Text(memo.content)
                                 .font(.subheadline)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.blue)
                         }
                     }
                 }
@@ -90,8 +90,8 @@ struct MovieMemoEditView: View {
         .padding()
         .navigationBarTitle("New Movie Memo")
         .navigationBarItems(trailing: Button("Save") {
-            movieStoryMemos.append(movieStoryMemo)
-            presentationMode.wrappedValue.dismiss()
+            movieStoryMemos.append(movieStoryMemo) // 배열에 집어 넣어주고
+            presentationMode.wrappedValue.dismiss() // dismiss
         }
         .disabled(movieStoryMemo.title.isEmpty || movieStoryMemo.content.isEmpty)
         //조건 중 하나라도 true이면, 즉 제목이나 내용 중 하나라도 비어있는 경우, .disabled(true)가 적용되어 버튼이 비활성화됩니다.
