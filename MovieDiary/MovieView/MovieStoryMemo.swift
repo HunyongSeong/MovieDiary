@@ -91,6 +91,7 @@ struct MovieMemoEditView: View {
         .navigationBarTitle("New Movie Memo")
         .navigationBarItems(trailing: Button("Save") {
             movieStoryMemos.append(movieStoryMemo) // 배열에 집어 넣어주고
+            print("저장 되었습니다.")
             presentationMode.wrappedValue.dismiss() // dismiss
         }
         .disabled(movieStoryMemo.title.isEmpty || movieStoryMemo.content.isEmpty)
